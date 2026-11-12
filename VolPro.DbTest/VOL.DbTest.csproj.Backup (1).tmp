@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;CS8618;CS8603;CS8600;CS8629;CS8625;</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;CS8618;CS8603;CS8600;CS8629;CS8625;</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DomainModels\**" />
+    <EmbeddedResource Remove="DomainModels\**" />
+    <None Remove="DomainModels\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SqlSugarCore" Version="5.1.4.182" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VolPro.Core\VolPro.Core.csproj" />
+    <ProjectReference Include="..\VolPro.Entity\VolPro.Entity.csproj" />
+  </ItemGroup>
+
+  <!-- 仅在 Release 配置中禁用调试信息 -->
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+</Project>

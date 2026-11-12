@@ -1,0 +1,13 @@
+# Visual Studio 缓存目录
+.vs/
+.idea/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+
+# 编译输出目录（最核心）
+**/bin/
+**/obj/
+**/Publish/
+**/publish/

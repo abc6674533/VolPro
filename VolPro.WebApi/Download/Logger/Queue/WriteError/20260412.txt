@@ -1,0 +1,7 @@
+中文提示 :  检测到你没有开启文件，AllowLoadLocalInfile=true加到自符串上，已自动执行 SET GLOBAL local_infile=1 在试一次
+English Message : Loading local data is disabled; this must be enabled on both the client and server sides   at SqlSugar.Check.ExceptionEasy(String enMessage, String cnMessage)
+   at SqlSugar.MySqlFastBuilder.ExecuteBulkCopyAsync(DataTable dt)
+   at SqlSugar.FastestProvider`1._BulkCopy(List`1 datas)
+   at SqlSugar.FastestProvider`1.BulkCopyAsync(List`1 datas)
+   at SqlSugar.FastestProvider`1.BulkCopy(List`1 datas)
+   at VOL.Core.Services.Logger.Start() in D:\Projects\debug\volpro\VOL.Core\Services\Logger.cs:line 194SqlSugar
